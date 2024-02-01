@@ -6,19 +6,25 @@ body {
 .paper {
     background-color: rgba(245, 245, 245, 0.5);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 50px;
+    padding: 70px;
 }
 
 .grid {
     display: grid;
-	gap: 25px;
-	grid-template-columns: 1fr 1fr 1fr;
+	gap: 30px;
+	/* grid-template-columns: 1fr 1fr 1fr; */
+}
+
+.flex {
+    align-items: flex-start;
+    display: flex;
+    flex-grow: 3;
 }
 
 .section {
     border: 2px solid rgba(245, 245, 245, 0.33);
     border-radius: 10px;
-    color: rgba(92, 92, 92, 0.7);
+    color: rgba(56, 54, 54, 0.7);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: .75em;
     font-style: normal;
@@ -30,7 +36,18 @@ img {
     border-radius: 10px;
     display: block;
     margin: 5% auto;
-    width: 75%;
+    width: 70%;
+}
+
+.iconbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.material-icons.md-48 {
+    color:white;
+    font-size: 48px;
+    margin: auto;
 }
 
 h1 {
@@ -46,7 +63,7 @@ h2 {
     font-size: 1.25rem;
     font-style: normal;
     margin: 0 0 30px;
-    text-align: left;
+    text-align: center;
 }
 
 h3 {
