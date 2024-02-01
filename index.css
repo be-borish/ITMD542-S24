@@ -1,5 +1,6 @@
 body {
     background-color: cadetblue;
+    padding: 6rem;
 }
 
 .paper {
@@ -10,24 +11,25 @@ body {
 
 .grid {
     display: grid;
-	gap: 10px;
+	gap: 25px;
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
 .section {
     border: 2px solid rgba(245, 245, 245, 0.33);
+    border-radius: 10px;
     color: rgba(92, 92, 92, 0.7);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: .75em;
     font-style: normal;
-    /* margin-bottom: 50px; */
     padding: 25px;
     text-align: left;
 }
 
 img {
+    border-radius: 10px;
     display: block;
-    margin: 10% auto;
+    margin: 5% auto;
     width: 75%;
 }
 
@@ -43,6 +45,36 @@ h1 {
 h2 {
     font-size: 1.25rem;
     font-style: normal;
-    margin: 0 0 20px;
+    margin: 0 0 30px;
     text-align: left;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-style: normal;
+    margin: 5px 0;
+    text-align: center;
+}
+
+h4 {
+    font-size: .9rem;
+    font-style: normal;
+    margin: 5px 0 25px;
+    text-align: center;
+}
+
+ul {
+    font-size: 1em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ol {
+    font-size: 1em;
+    list-style: disc;
+}
+
+li {
+    margin-bottom: 0.67em;
 }
