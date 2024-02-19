@@ -2,6 +2,8 @@ extends layout
 
 block content
   h1= title 
+  div(class='container right')
+    a(class='greyBtn' href='/contacts') Back
   hr
   label First Name: 
     | 
@@ -26,10 +28,7 @@ block content
   label Date Updated: 
     | 
   p=`${contact.dateUpdated}`
-  div.contact-actions 
-    a(href=`/contacts/${contact.id}/edit`) Edit Contact
-    | 
-    a(href=`/contacts/${contact.id}/delete`) Delete Contact
+  a(href=`/contacts/${contact.id}/edit`) Edit Contact
+  | 
+  a(class='redBtn' href=`/contacts/${contact.id}/delete`) Delete Contact
   p(class='container labTag') ~ ITMD 541 - Lab 2 - Bori Kim ~
-    
-    

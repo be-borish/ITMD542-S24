@@ -3,9 +3,8 @@ extends layout
 block content
   h1= title
   h2 Welcome to #{title}!
-  div(class='container add')
-    a(href='/contacts/add')
-      button Add Contact
+  div(class='container right')
+    a(href='/contacts/add') Add Contact
   hr
   table
     tr
@@ -19,5 +18,5 @@ block content
         th=val.lastName
         th=val.email
         th
-          a(href=`/contacts/${val.id}`) View
+          a(class='greyBtn' href=`/contacts/${val.id}`) View
   p(class='container labTag') ~ ITMD 541 - Lab 2 - Bori Kim ~

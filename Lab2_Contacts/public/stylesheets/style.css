@@ -7,8 +7,10 @@ html {
 body {
   background-color: rgba(245, 245, 245, 0.7);
   border: 3px solid rgb(150, 150, 150);
-  padding: 50px;
+  padding: 40px;
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 40px;
+  /* overflow: scroll; */
 }
 
 h1 {
@@ -16,6 +18,7 @@ h1 {
   font-size: 2.5rem;
   letter-spacing: 2px;
   margin-bottom: 5px;
+  margin-top: 5px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
 }
@@ -33,7 +36,7 @@ hr {
 }
 
 form {
-  margin: 10px;
+  /* margin: 10px; */
 }
 
 input {
@@ -47,23 +50,37 @@ input {
   justify-content: center;
 }
 
-.add {
+.right {
   justify-content: right;
 }
 
 a {
-  color: #008cc4;
+  color: whitesmoke;
+  background-color: #008cc4;
+  border-radius: 5px;
   font-weight: bold;
+  padding: 8px 16px;
+  text-decoration: none
+}
+
+.greyBtn {
+  background-color: rgb(100, 100, 100);
+  color: whitesmoke;
 }
 
 button {
   background-color: rgba(255, 175, 0, 0.8);
   border: none;
   border-radius: 5px;
-  color: rgb(89, 89, 89);
+  color: rgb(80, 80, 80);
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-weight: bold;
   padding: 8px 16px;
+}
+
+.redBtn {
+  background-color: rgb(175, 0, 0);
+  color: whitesmoke;
 }
 
 .myInfo {

@@ -72,6 +72,8 @@ body('email').optional({values: 'falsy'}).trim().isEmail().withMessage('Email mu
 function(req, res, next) {
   const result = validationResult(req);
   const contact = contactsRepo.findById(req.params.uuid);
+  contact.notes = req.body.notes.trim();
+  console.log(req.body);
   if (!result.isEmpty()) {
     res.render('contacts_edit', {
       title: `Edit ${contact.firstName} ${contact.lastName}'s Contact Information`,
