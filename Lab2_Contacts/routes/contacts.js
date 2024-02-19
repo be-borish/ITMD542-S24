@@ -98,4 +98,10 @@ router.get('/:uuid/delete', function(req, res, next) {
   res.render('contacts_delete', { title: 'Delete Contact', contact: contact} );
 });
 
+/* POST contacts delete */
+router.post('/:uuid/delete', function(req, res, next) {
+  contactsRepo.deleteById(req.params.uuid);
+  res.redirect('/contacts');
+});
+
 module.exports = router;
