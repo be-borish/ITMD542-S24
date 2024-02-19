@@ -21,7 +21,6 @@ body('lastName').trim().notEmpty().withMessage('Last name cannot be empty!'),
 body('email').optional({values: 'falsy'}).trim().isEmail().withMessage('Email must be a valid email address!'),
 function(req, res, next) {
   const result = validationResult(req);
-  console.log(req.body);
   if (!result.isEmpty()) {
     res.render('contacts_add', {
       title: 'Add a Contact',
@@ -66,12 +65,17 @@ router.get('/:uuid/edit', function(req, res, next) {
 });
 
 /* POST contacts edit */
-router.post('/:uuid/edit', function(req, res, next) {
+router.post('/:uuid/edit',
+body('firstName').trim().notEmpty().withMessage('First name cannot be empty!'),
+body('lastName').trim().notEmpty().withMessage('Last name cannot be empty!'),
+body('email').optional({values: 'falsy'}).trim().isEmail().withMessage('Email must be a valid email address!'),
+function(req, res, next) {
+  const result = validationResult(req);
   const contact = contactsRepo.findById(req.params.uuid);
-  if (req.body.firstName.trim() === '' || req.body.lastName.trim() === '') {
+  if (!result.isEmpty()) {
     res.render('contacts_edit', {
       title: `Edit ${contact.firstName} ${contact.lastName}'s Contact Information`,
-      msg: 'First & Last name cannot be empty!',
+      msg: result.array(),
       contact: contact
     });
   } else {

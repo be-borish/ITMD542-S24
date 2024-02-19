@@ -5,7 +5,9 @@ block content
   p Make changes in the form below to update the contact.
   hr
   if msg 
-    p(class='redtext')=msg
+    each val in msg 
+      ul 
+        li(class='redtext')=val.msg
   form(method='POST' action=`/contacts/${contact.id}/edit`)
     label First Name:
     | 
