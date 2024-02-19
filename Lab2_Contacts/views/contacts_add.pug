@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= title
-  p Fill out the form below to add a new contact.
+  h2 Fill out the form below to add a new contact.
   hr
   if msg 
     each val in msg 
@@ -32,3 +32,4 @@ block content
     button(type='submit') Save
     | 
     a(href='/contacts') Cancel
+  p(class='container labTag') ~ ITMD 541 - Lab 2 - Bori Kim ~

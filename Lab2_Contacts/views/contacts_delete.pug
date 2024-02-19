@@ -2,24 +2,25 @@ extends layout
 
 block content
   h1= title
-  p(class='redtext') Are you sure you want to delete the following contact?
+  h2(class='redtext') Are you sure you want to delete the following contact?
   hr
-  label First Name: 
-    | 
-  p=`${contact.firstName}`
-  br
-  label Last Name: 
-    | 
-  p=`${contact.lastName}`
-  br
-  label Email: 
-    | 
-  p=`${contact.email}`
-  br
-  label Notes: 
-    | 
-  p=`${contact.notes}`
   form(method='POST' action=`/contacts/${contact.id}/delete`)
+    label First Name: 
+    | 
+    p=`${contact.firstName}`
+    br
+    label Last Name: 
+    | 
+    p=`${contact.lastName}`
+    br
+    label Email: 
+    | 
+    p=`${contact.email}`
+    br
+    label Notes: 
+    | 
+    p=`${contact.notes}`
     button(type='submit') Confirm Delete
     | 
     a(href=`/contacts/${contact.id}`) Cancel
+  p(class='container labTag') ~ ITMD 541 - Lab 2 - Bori Kim ~

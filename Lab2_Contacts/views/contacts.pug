@@ -2,19 +2,22 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
-  a(href='/contacts/add') Add a Contact
+  h2 Welcome to #{title}!
+  div(class='container add')
+    a(href='/contacts/add')
+      button Add Contact
   hr
-  table(style='width:100%', border='1', )
-    tr#headtag
-        th First Name
-        th Last Name
-        th Email
-        th View Contact Info
+  table
+    tr
+      th(class='header') First Name
+      th(class='header') Last Name
+      th(class='header') Email
+      th(class='header') View Contact Info
     each val in contacts
-        tr
-            th=val.firstName
-            th=val.lastName
-            th=val.email
-            th
-              a(href=`/contacts/${val.id}`) View
+      tr
+        th=val.firstName
+        th=val.lastName
+        th=val.email
+        th
+          a(href=`/contacts/${val.id}`) View
+  p(class='container labTag') ~ ITMD 541 - Lab 2 - Bori Kim ~
