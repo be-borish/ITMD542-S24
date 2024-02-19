@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  h1= title
+  p Fill out the form below to add a new contact.
+  hr
+  if msg 
+    each val in msg 
+      ul 
+        li(class='redtext')=val.msg
+  form(method='POST' action='/contacts/add')
+    label First Name:
+    | 
+    input(type='text' name='firstName' placeholder='Add first name' value=firstName required)
+    br
+    br
+    label Last Name:
+    | 
+    input(type='text' name='lastName' placeholder='Add last name' value=lastName required)
+    br
+    br
+    label Email:
+    | 
+    input(type='text' name='email' placeholder='Add email address')
+    br
+    br
+    label Notes:
+    | 
+    input(type='text' name='notes' placeholder='Add notes' value=notes)
+    br
+    br
+    button(type='submit') Save
+    | 
+    a(href='/contacts') Cancel

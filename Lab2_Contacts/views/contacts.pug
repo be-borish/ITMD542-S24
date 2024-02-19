@@ -3,3 +3,11 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  a(href='/contacts/add') Add a Contact
+  hr
+  if contacts.length > 0
+    #contacts-wrapper
+      ul.contacts-list
+        each val in contacts
+          li(data-contactid=val.id)
+            a(href=`/contacts/${val.id}`)=`${val.firstName} ${val.lastName}`

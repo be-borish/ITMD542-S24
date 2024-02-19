@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1= title
+  p Make changes in the form below to update the contact.
+  hr
+  if msg 
+    p(class='redtext')=msg
+  form(method='POST' action=`/contacts/${contact.id}/edit`)
+    label First Name:
+    | 
+    input(type='text' name='firstName' value=contact.firstName required)
+    br
+    br
+    label Last Name:
+    | 
+    input(type='text' name='lastName' value=contact.lastName required)
+    br
+    br
+    label Email:
+    | 
+    input(type='text' name='email' value=contact.email)
+    br
+    br
+    label Notes:
+    | 
+    input(type='text' name='notes' value=contact.notes)
+    br
+    br
+    button(type='submit') Save Changes
+    | 
+    a(href='/contacts') Cancel

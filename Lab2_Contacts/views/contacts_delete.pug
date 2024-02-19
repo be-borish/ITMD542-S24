@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1= title
+  p(class='redtext') Are you sure you want to delete the following contact?
+  hr
+  label First Name: 
+    | 
+  p=`${contact.firstName}`
+  br
+  br
+  label Last Name: 
+    | 
+  p=`${contact.lastName}`
+  br
+  br
+  label Email: 
+    | 
+  p=`${contact.email}`
+  br
+  br
+  label Notes: 
+    | 
+  p=`${contact.notes}`
+  form(method='POST' action=`/contacts/${contact.id}/delete`)
+    button(type='submit') Confirm Delete
+    | 
+    a(href=`/contacts/${contact.id}`) Cancel
