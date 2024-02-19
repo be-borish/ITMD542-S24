@@ -44,7 +44,8 @@ function(req, res, next) {
 /* GET a contact */
 router.get('/:uuid', function(req, res, next) {
   const contact = contactsRepo.findById(req.params.uuid);
-  console.log(contact);
+  contact.dateCreated = new Date(contact.dateCreated).toLocaleString();
+  contact.dateUpdated = new Date(contact.dateUpdated).toLocaleString();
   if (contact) {
     res.render('contact', {
       title: `${contact.firstName} ${contact.lastName}'s Contact Information`,
@@ -53,7 +54,6 @@ router.get('/:uuid', function(req, res, next) {
   } else {
     res.redirect('/contacts');
   }
-  
 });
 
 /* GET contacts edit */
