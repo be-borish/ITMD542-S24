@@ -5,9 +5,16 @@ block content
   p Welcome to #{title}
   a(href='/contacts/add') Add a Contact
   hr
-  if contacts.length > 0
-    #contacts-wrapper
-      ul.contacts-list
-        each val in contacts
-          li(data-contactid=val.id)
-            a(href=`/contacts/${val.id}`)=`${val.firstName} ${val.lastName}`
+  table(style='width:100%', border='1', )
+    tr#headtag
+        th First Name
+        th Last Name
+        th Email
+        th View Contact Info
+    each val in contacts
+        tr
+            th=val.firstName
+            th=val.lastName
+            th=val.email
+            th
+              a(href=`/contacts/${val.id}`) View
