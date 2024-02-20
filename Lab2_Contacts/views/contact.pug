@@ -1,34 +1,25 @@
 extends layout
 
 block content
-  h1= title 
-  div(class='container right')
-    a(class='greyBtn' href='/contacts') Back
-  hr
-  label First Name: 
-    | 
-  p=`${contact.firstName}`
-  br
-  label Last Name: 
-    | 
-  p=`${contact.lastName}`
-  br
-  label Email: 
-    | 
-  p=`${contact.email}`
-  br
-  label Notes: 
-    | 
-  p=`${contact.notes}`
-  br
-  label Date Created: 
-    | 
-  p=`${contact.dateCreated}`
-  br
-  label Date Updated: 
-    | 
-  p=`${contact.dateUpdated}`
-  a(href=`/contacts/${contact.id}/edit`) Edit Contact
-  | 
-  a(class='redBtn' href=`/contacts/${contact.id}/delete`) Delete Contact
-  p(class='container labTag') ~ ITMD 541 - Lab 2 - Bori Kim ~
+  div(class='page')
+    h1= title 
+    div(class='container right')
+      a(class='greyBtn' href='/contacts') Back
+    hr
+    div(class='grid')
+      label(class='section left') First Name:
+      p(class='section right')=`${contact.firstName}`
+      label(class='section left') Last Name:
+      p(class='section right')=`${contact.lastName}`
+      label(class='section left') Email:
+      p(class='section right')=`${contact.email}`
+      label(class='section left') Notes:
+      p(class='section right')=`${contact.notes}`
+      label(class='section left') Date Created:
+      p(class='section right')=`${contact.dateCreated}`
+      label(class='section left') Date Updated:
+      p(class='section right')=`${contact.dateUpdated}`
+    div(class='container')
+      a(href=`/contacts/${contact.id}/edit`) Edit Contact
+      a(class='redBtn' href=`/contacts/${contact.id}/delete`) Delete Contact
+    p(class='container labTag') ~ ITMD 541 - Lab 2 - Bori Kim ~

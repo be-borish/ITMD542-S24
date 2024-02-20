@@ -1,35 +1,25 @@
 extends layout
 
 block content
-  h1= title
-  h2 Make changes in the form below to update the contact.
-  hr
-  if msg 
-    each val in msg 
-      ul 
-        li(class='redtext')=val.msg
-  form(method='POST' action=`/contacts/${contact.id}/edit`)
-    label First Name:
-    | 
-    input(type='text' name='firstName' value=contact.firstName required)
-    br
-    br
-    label Last Name:
-    | 
-    input(type='text' name='lastName' value=contact.lastName required)
-    br
-    br
-    label Email:
-    | 
-    input(type='text' name='email' value=contact.email)
-    br
-    br
-    label Notes:
-    | 
-    input(type='text' name='notes' value=contact.notes)
-    br
-    br
-    button(type='submit') Save Changes
-    | 
-    a(class='greyBtn' href='/contacts') Cancel
-  p(class='container labTag') ~ ITMD 541 - Lab 2 - Bori Kim ~
+  div(class='page')
+    h1= title
+    h2 Make changes in the form below to update the contact.
+    hr
+    if msg 
+      each val in msg 
+        ul 
+          li(class='redtext')=val.msg
+    form(method='POST' action=`/contacts/${contact.id}/edit`)
+      div(class='grid form')
+        label(class='section left') First Name:
+        input(class='section right' type='text' name='firstName' maxlength='25' value=contact.firstName required)
+        label(class='section left') Last Name:
+        input(class='section right' type='text' name='lastName' maxlength='25' value=contact.lastName required)
+        label(class='section left') Email:
+        input(class='section right' type='text' name='email' maxlength='50' value=contact.email)
+        label(class='section left') Notes:
+        input(class='section right' type='text' name='notes' maxlength='50' value=contact.notes)
+      div(class='container')
+        button(type='submit') Save Changes
+        a(class='greyBtn' href='/contacts') Cancel
+    p(class='container labTag') ~ ITMD 541 - Lab 2 - Bori Kim ~

@@ -2,15 +2,54 @@ html {
   background: url(/images/contacts-img.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.page {
   background-color: rgba(245, 245, 245, 0.7);
   border: 3px solid rgb(150, 150, 150);
+  margin: 25px;
+  padding: 50px;
+}
+
+.grid {
+  background-color: rgba(250, 230, 190, 0.5);
+  border-radius: 10px;
+  display: grid;
+  gap: 10px;
+  grid-auto-rows: 50px;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 40%;
+}
+
+.grid.form {
+  gap: 25px;
+  width: 50%;
   padding: 40px;
-  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
-  margin: 40px;
-  /* overflow: scroll; */
+}
+
+.section.left {
+  align-items: center;
+	display: flex;
+	justify-content: right;
+}
+
+.section.right {
+  align-items: center;
+	display: flex;
+	justify-content: left;
 }
 
 h1 {
@@ -35,8 +74,9 @@ hr {
   margin: 20px 0;
 }
 
-form {
-  /* margin: 10px; */
+.intro {
+  font-weight: bold;
+  text-align: center;
 }
 
 input {
@@ -60,7 +100,8 @@ a {
   border-radius: 5px;
   font-weight: bold;
   padding: 8px 16px;
-  text-decoration: none
+  text-decoration: none;
+  margin: 10px;
 }
 
 .greyBtn {
@@ -86,6 +127,7 @@ button {
 .myInfo {
   font-style: italic;
   text-align: center;
+  padding-top: 40px;
 }
 
 .redtext {
@@ -110,6 +152,7 @@ th, td {
 label {
   font-weight: bold;
   margin-right: 15px;
+  text-align: right;
 }
 
 .labTag {

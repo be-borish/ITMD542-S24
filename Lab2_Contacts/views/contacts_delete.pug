@@ -1,26 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  h2(class='redtext') Are you sure you want to delete the following contact?
-  hr
-  form(method='POST' action=`/contacts/${contact.id}/delete`)
-    label First Name: 
-    | 
-    p=`${contact.firstName}`
-    br
-    label Last Name: 
-    | 
-    p=`${contact.lastName}`
-    br
-    label Email: 
-    | 
-    p=`${contact.email}`
-    br
-    label Notes: 
-    | 
-    p=`${contact.notes}`
-    button(class='redBtn' type='submit') Confirm Delete
-    | 
-    a(class='greyBtn' href=`/contacts/${contact.id}`) Cancel
-  p(class='container labTag') ~ ITMD 541 - Lab 2 - Bori Kim ~
+  div(class='page')
+    h1= title
+    hr
+    h2(class='redtext') Are you sure you want to delete the following contact?
+    form(method='POST' action=`/contacts/${contact.id}/delete`)
+      div(class='grid')
+        label(class='section left') First Name:
+        p(class='section right')=`${contact.firstName}`
+        label(class='section left') Last Name:
+        p(class='section right')=`${contact.lastName}`
+        label(class='section left') Email:
+        p(class='section right')=`${contact.email}`
+        label(class='section left') Notes:
+        p(class='section right')=`${contact.notes}`
+      div(class='container')
+        button(class='redBtn' type='submit') Confirm Delete
+        a(class='greyBtn' href=`/contacts/${contact.id}`) Cancel
+    p(class='container labTag') ~ ITMD 541 - Lab 2 - Bori Kim ~

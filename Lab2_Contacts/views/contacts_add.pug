@@ -1,35 +1,25 @@
 extends layout
 
 block content
-  h1= title
-  h2 Fill out the form below to add a new contact.
-  hr
-  if msg 
-    each val in msg 
-      ul 
-        li(class='redtext')=val.msg
-  form(method='POST' action='/contacts/add')
-    label First Name:
-    | 
-    input(type='text' name='firstName' placeholder='Add first name' value=firstName required)
-    br
-    br
-    label Last Name:
-    | 
-    input(type='text' name='lastName' placeholder='Add last name' value=lastName required)
-    br
-    br
-    label Email:
-    | 
-    input(type='text' name='email' placeholder='Add email address')
-    br
-    br
-    label Notes:
-    | 
-    input(type='text' name='notes' placeholder='Add notes' value=notes)
-    br
-    br
-    button(type='submit') Save
-    | 
-    a(class='greyBtn' href='/contacts') Cancel
-  p(class='container labTag') ~ ITMD 541 - Lab 2 - Bori Kim ~
+  div(class='page')
+    h1= title
+    h2 Fill out the form below to add a new contact.
+    hr
+    if msg 
+      each val in msg 
+        ul 
+          li(class='redtext')=val.msg
+    form(method='POST' action='/contacts/add')
+      div(class='grid form')
+        label(class='section left') First Name:
+        input(class='section right' type='text' name='firstName' maxlength='25' placeholder='Add first name' value=firstName required)
+        label(class='section left') Last Name:
+        input(class='section right' type='text' name='lastName' maxlength='25' placeholder='Add last name' value=lastName required)
+        label(class='section left') Email:
+        input(class='section right' type='text' name='email' maxlength='50' placeholder='Add email address')
+        label(class='section left') Notes:
+        input(class='section right' type='text' name='notes' maxlength='50' placeholder='Add notes' value=notes)
+      div(class='container')
+        button(type='submit') Save
+        a(class='greyBtn' href='/contacts') Cancel
+    p(class='container labTag') ~ ITMD 541 - Lab 2 - Bori Kim ~

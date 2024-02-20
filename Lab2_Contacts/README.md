@@ -26,10 +26,11 @@ _Clone my ITMD542-S24 repository linked under About Me section above_
 5. Run `npm install` to install dependencies
 6. Confirm that you now have **node_modules** folder created inside Lab2_Contacts project folder
 7. Run `npm start` to run the application
-8. Open a browser and go to `http://localhost:3000/`
+8. Open a browser and go to `http://localhost:3000/` to view the application
 
 # Insights and Results
 Using Pug was pretty challenging but interesting at the same time. It is one of those tools that has a learning curve in tha beginning, but you can really benefit from it once you get used to it. As a first timer, I had to spend a lot more time to apply styling in this project but I'm glad I was able to learn from it. <br>
+<br>
 On the other hand, it was really convinient to be able to use Node JS modules such as Crypto and File System which made the CRUD operation and input validation quicker and easier.
 
 # References
