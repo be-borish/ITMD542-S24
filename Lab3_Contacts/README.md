@@ -6,7 +6,7 @@
 **Repository URL**: [https://github.com/be-borish/ITMD542-S24/tree/main/Lab3_Contacts](https://github.com/be-borish/ITMD542-S24/tree/main/Lab3_Contacts)
 
 # Project Description
-This Node JS Express application is a Contacts Database. It allows users to **Create, Read, Update, Delete (CRUD) contacts** and have the contacts information saved in a JSON file
+This Node JS Express application is a Contacts Database. It allows users to **Create, Read, Update, Delete (CRUD) contacts** and have the contacts information saved in SQLite database engine
 
 # Development Environment 
 - **Operating System**: macOS Sonoma 14.1.2 <br>
