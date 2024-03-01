@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  div(class='page')
+    h1= title 
+    div(class='container right')
+      a(class='greyBtn' href='/contacts') Back
+    hr
+    div(class='grid')
+      label(class='section left') First Name:
+      p(class='section right')=`${contact.firstName}`
+      label(class='section left') Last Name:
+      p(class='section right')=`${contact.lastName}`
+      label(class='section left') Email:
+      p(class='section right')=`${contact.email}`
+      label(class='section left') Notes:
+      p(class='section right')=`${contact.notes}`
+      label(class='section left') Date Created:
+      p(class='section right')=`${contact.dateCreated}`
+      label(class='section left') Date Updated:
+      p(class='section right')=`${contact.dateUpdated}`
+    div(class='container')
+      a(href=`/contacts/${contact.id}/edit`) Edit Contact
+      a(class='redBtn' href=`/contacts/${contact.id}/delete`) Delete Contact
+    p(class='container labTag') ~ ITMD 542 - Lab 3 - Bori Kim ~
